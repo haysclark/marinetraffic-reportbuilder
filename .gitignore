@@ -14,3 +14,6 @@ pids
 
 # Dependency directories
 node_modules
+
+# Coverage output
+coverage/
