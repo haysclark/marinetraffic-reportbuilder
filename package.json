@@ -4,7 +4,9 @@
   "description": "A service for updating Marine Traffic via self reports.",
   "main": "bin/index.js",
   "scripts": {
-    "test": "mocha spec -u tdd -R spec --recursive"
+    "test": "mocha spec -u tdd -R spec --recursive",
+    "coverage": "istanbul cover -x '**/spec/**' ./node_modules/mocha/bin/_mocha -- --recursive --require spec/helpers/chai.js spec",
+    "report": "open ./coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,9 @@
   "homepage": "https://github.com/haysclark/marinetraffic-selfreporter#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.2.0",
     "sinon": "^1.17.7"
   }
 }
