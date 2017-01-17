@@ -1,0 +1,23 @@
+{
+  "name": "marinetraffic-selfreporter",
+  "version": "0.0.1",
+  "description": "A service for updating Marine Traffic via self reports.",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "mocha spec -u tdd -R spec --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haysclark/marinetraffic-selfreporter.git"
+  },
+  "keywords": [
+    "marinetraffic",
+    "ais"
+  ],
+  "author": "Hays Clark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haysclark/marinetraffic-selfreporter/issues"
+  },
+  "homepage": "https://github.com/haysclark/marinetraffic-selfreporter#readme"
+}
