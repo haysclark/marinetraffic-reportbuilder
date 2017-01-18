@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "main": "bin/marinetraffic/positionreportbuilder.js",
   "scripts": {
+	"lint": "grunt jshint",
     "test": "mocha spec -u tdd -R spec --recursive",
     "coverage": "istanbul cover -x '**/spec/**' ./node_modules/mocha/bin/_mocha -- --recursive --require spec/helpers/chai.js spec",
     "report": "open ./coverage/lcov-report/index.html"
@@ -14,7 +15,13 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.15",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-mocha-cli": "^3.0.0",
+    "grunt-mocha-istanbul": "^5.0.2",
     "istanbul": "^0.4.5",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.5.2",
     "mocha": "^3.2.0",
     "mocha-lcov-reporter": "^1.2.0",
     "sinon": "^1.17.7"

@@ -1,8 +1,8 @@
 'use strict';
 
-var PositionReportBuilder = require("../../bin/marinetraffic/positionreportbuilder");
+const PositionReportBuilder = require('../../bin/marinetraffic/positionreportbuilder');
 
-describe("PositionReportBuilder", function() {
+describe('PositionReportBuilder', function() {
     const mmsi = '327725610';
     const latitude = '48.4929646';
     const longitude = '-122.6803961';
@@ -10,7 +10,7 @@ describe("PositionReportBuilder", function() {
     const course = '005';
     const timestamp = '2016-05-02 22:00';
 
-    var builder;
+    let builder;
 
     before(function () {
         builder = new PositionReportBuilder();
@@ -28,7 +28,7 @@ describe("PositionReportBuilder", function() {
         assert.isFunction(builder.build);
     });
 
-    describe("build()", function() {
+    describe('build()', function() {
 
         before(function () {
             builder = new PositionReportBuilder(
@@ -62,32 +62,32 @@ describe("PositionReportBuilder", function() {
 
         it('should return report with expected MMSI value', function () {
             let result = builder.build();
-            assert.include(result, "MMSI=" + mmsi);
+            assert.include(result, 'MMSI=' + mmsi);
         });
 
         it('should return report with expected latitude value', function () {
             let result = builder.build();
-            assert.include(result, "LAT=" + latitude);
+            assert.include(result, 'LAT=' + latitude);
         });
 
         it('should return report with expected longitude value', function () {
             let result = builder.build();
-            assert.include(result, "LON=" + longitude);
+            assert.include(result, 'LON=' + longitude);
         });
 
         it('should return report with expected speed value', function () {
             let result = builder.build();
-            assert.include(result, "SPEED=" + speed);
+            assert.include(result, 'SPEED=' + speed);
         });
 
         it('should return report with expected course value', function () {
             let result = builder.build();
-            assert.include(result, "COURSE=" + course);
+            assert.include(result, 'COURSE=' + course);
         });
 
         it('should return report with expected timestamp value', function () {
             let result = builder.build();
-            assert.include(result, "TIMESTAMP=" + timestamp);
+            assert.include(result, 'TIMESTAMP=' + timestamp);
         });
     });
 
@@ -95,12 +95,12 @@ describe("PositionReportBuilder", function() {
         assert.isFunction(builder.setMmsi);
     });
 
-    describe("setMmsi()", function() {
+    describe('setMmsi()', function() {
         it('should set the reports MMSI', function () {
-            var expected = "abcdefg"
+            let expected = 'abcdefg';
             builder.setMmsi(expected);
             let result = builder.build();
-            assert.include(result, "MMSI=" + expected);
+            assert.include(result, 'MMSI=' + expected);
         });
     });
 
@@ -108,12 +108,12 @@ describe("PositionReportBuilder", function() {
         assert.isFunction(builder.setLatitude);
     });
 
-    describe("setLatitude()", function() {
+    describe('setLatitude()', function() {
         it('should set the reports latitude', function () {
-            var expected = 123.1234;
+			let expected = 123.1234;
             builder.setLatitude(expected);
             let result = builder.build();
-            assert.include(result, "LAT=" + expected);
+            assert.include(result, 'LAT=' + expected);
         });
     });
 
@@ -121,12 +121,12 @@ describe("PositionReportBuilder", function() {
         assert.isFunction(builder.setLongitude);
     });
 
-    describe("setLongitude()", function() {
+    describe('setLongitude()', function() {
         it('should set the reports longitude', function () {
-            var expected = 123.1234;
+            let expected = 123.1234;
             builder.setLongitude(expected);
             let result = builder.build();
-            assert.include(result, "LON=" + expected);
+            assert.include(result, 'LON=' + expected);
         });
     });
 
@@ -134,12 +134,12 @@ describe("PositionReportBuilder", function() {
         assert.isFunction(builder.setSpeed);
     });
 
-    describe("setSpeed()", function() {
+    describe('setSpeed()', function() {
         it('should set the reports speed', function () {
-            var expected = 123.1234;
+            let expected = 123.1234;
             builder.setSpeed(expected);
             let result = builder.build();
-            assert.include(result, "SPEED=" + expected);
+            assert.include(result, 'SPEED=' + expected);
         });
     });
 
@@ -147,12 +147,12 @@ describe("PositionReportBuilder", function() {
         assert.isFunction(builder.setCourse);
     });
 
-    describe("setCourse()", function() {
+    describe('setCourse()', function() {
         it('should set the reports course', function () {
-            var expected = 123.1234;
+            let expected = 123.1234;
             builder.setCourse(expected);
             let result = builder.build();
-            assert.include(result, "COURSE=" + expected);
+            assert.include(result, 'COURSE=' + expected);
         });
     });
 
@@ -160,19 +160,19 @@ describe("PositionReportBuilder", function() {
         assert.isFunction(builder.setTimestamp);
     });
 
-    describe("setTimestamp()", function() {
+    describe('setTimestamp()', function() {
         it('should set the reports timestamp with Date object', function () {
-            var expected = "1999-09-19 09:09";
+            let expected = '1999-09-19 09:09';
             builder.setTimestamp(new Date(expected));
             let result = builder.build();
-            assert.include(result, "TIMESTAMP=" + expected);
+            assert.include(result, 'TIMESTAMP=' + expected);
         });
 
         it('should set the reports timestamp with date string', function () {
-            var expected = "1999-09-19 09:09";
+            let expected = '1999-09-19 09:09';
             builder.setTimestamp(expected);
             let result = builder.build();
-            assert.include(result, "TIMESTAMP=" + expected);
+            assert.include(result, 'TIMESTAMP=' + expected);
         });
     });
 });
