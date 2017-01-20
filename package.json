@@ -1,7 +1,7 @@
 {
   "name": "marinetraffic-reportbuilder",
   "description": "Marine Traffic utility for creating position self reports.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "bin/marinetraffic/positionreportbuilder.js",
   "scripts": {
 	"lint": "grunt jshint",
