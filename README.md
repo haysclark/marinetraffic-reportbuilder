@@ -1,5 +1,6 @@
-Marine Traffic Self Reporter [![Build Status](https://travis-ci.org/haysclark/marinetraffic-reportbuilder.svg)](https://travis-ci.org/haysclark/marinetraffic-reportbuilder)[![Coverage Status](https://coveralls.io/repos/github/haysclark/marinetraffic-reportbuilder/badge.svg?branch=develop)](https://coveralls.io/github/haysclark/marinetraffic-reportbuilder?branch=develop)[![npm version](https://badge.fury.io/js/marinetraffic-reportbuilder.svg)](http://badge.fury.io/js/marinetraffic-reportbuilder)
-===========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+Marine Traffic Self Reporter
+============================
+[![Build Status](https://travis-ci.org/haysclark/marinetraffic-reportbuilder.svg)](https://travis-ci.org/haysclark/marinetraffic-reportbuilder) [![Coverage Status](https://coveralls.io/repos/github/haysclark/marinetraffic-reportbuilder/badge.svg?branch=develop)](https://coveralls.io/github/haysclark/marinetraffic-reportbuilder?branch=develop) [![Dependencies Status](https://david-dm.org/haysclark/marinetraffic-reportbuilder.svg)](https://david-dm.org) [![Known Vulnerabilities](https://snyk.io/test/github/haysclark/marinetraffic-reportbuilder/badge.svg)](https://snyk.io/test/github/haysclark/marinetraffic-reportbuilder)
 
 A builder for creating Marine Traffic position reports.
 
