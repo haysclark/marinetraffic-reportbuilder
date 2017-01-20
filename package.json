@@ -1,23 +1,43 @@
 {
-  "name": "marinetraffic-selfreporter",
-  "version": "0.0.1",
-  "description": "A service for updating Marine Traffic via self reports.",
-  "main": "bin/index.js",
+  "name": "marinetraffic-reportbuilder",
+  "description": "Marine Traffic utility for creating position self reports.",
+  "version": "1.0.0",
+  "main": "bin/marinetraffic/positionreportbuilder.js",
   "scripts": {
-    "test": "mocha spec -u tdd -R spec --recursive"
+	"lint": "grunt jshint",
+    "test": "mocha spec -u tdd -R spec --recursive",
+    "coverage": "istanbul cover -x '**/spec/**' ./node_modules/mocha/bin/_mocha -- --recursive --require spec/helpers/chai.js spec",
+    "report": "open ./coverage/lcov-report/index.html"
+  },
+  "dependencies": {
+    "moment": "^2.17.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-mocha-cli": "^3.0.0",
+    "grunt-mocha-istanbul": "^5.0.2",
+    "istanbul": "^0.4.5",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.5.2",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.2.0",
+    "sinon": "^1.17.7"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haysclark/marinetraffic-selfreporter.git"
+    "url": "git+https://github.com/haysclark/marinetraffic-reportbuilder.git"
   },
   "keywords": [
     "marinetraffic",
     "ais"
   ],
-  "author": "Hays Clark",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haysclark/marinetraffic-selfreporter/issues"
+    "url": "https://github.com/haysclark/marinetraffic-reportbuilder/issues"
   },
-  "homepage": "https://github.com/haysclark/marinetraffic-selfreporter#readme"
+  "homepage": "https://github.com/haysclark/marinetraffic-reportbuilder#readme",
+  "author": "Hays Clark",
+  "license": "MIT"
 }
