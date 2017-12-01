@@ -10,7 +10,7 @@
     "prepublish": "publish-please guard"
   },
   "dependencies": {
-    "moment": "2.17.1"
+    "moment": "2.19.3"
   },
   "devDependencies": {
     "chai": "3.5.0",
